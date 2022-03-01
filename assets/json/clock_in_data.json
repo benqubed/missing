@@ -1,0 +1,42 @@
+[
+    {
+      "date": "Mon Apr 19",
+      "regular": "08:45",
+      "over": "00.00",
+      "double": "00:00",
+      "breaks": "03:00",
+      "total": "08:40"
+    },
+    {
+      "date": "Tue Apr 20",
+      "regular": "09:25",
+      "over": "00.00",
+      "double": "00:00",
+      "breaks": "03:00",
+      "total": "08:40"
+    },
+    {
+      "date": "Wed Apr 21",
+      "regular": "07:50",
+      "over": "00.00",
+      "double": "00:00",
+      "breaks": "12:00",
+      "total": "15:40"
+    },
+    {
+      "date": "Thur Apr 22",
+      "regular": "08:45",
+      "over": "00.00",
+      "double": "00:00",
+      "breaks": "03:00",
+      "total": "08:40"
+    },
+    {
+      "date": "Fri Apr 23",
+      "regular": "08:45",
+      "over": "00.00",
+      "double": "00:00",
+      "breaks": "03:00",
+      "total": "08:40"
+    }
+]

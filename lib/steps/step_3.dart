@@ -1,0 +1,145 @@
+import 'package:flutter/material.dart';
+import 'package:missing/constants.dart' as constants;
+import 'package:missing/widgets/dropdown.dart';
+import 'package:missing/widgets/optitem.dart';
+
+class StepThree extends StatefulWidget {
+  const StepThree({Key? key}) : super(key: key);
+
+  @override
+  _StepThreeState createState() => _StepThreeState();
+}
+
+class _StepThreeState extends State<StepThree> {
+  final List<OptItem> _optItems = [
+    const OptItem(
+      title: "Yes",
+    ),
+    const OptItem(
+      title: "No",
+    ),
+  ];
+
+  var valueChanged;
+  var valueChangedTwo;
+  var valueChangedThree;
+  var valueChangedFour;
+  bool isChanged = false;
+
+  @override
+  Widget build(BuildContext context) {
+    ThemeData theme = Theme.of(context);
+    return Padding(
+      padding: const EdgeInsets.all(15.0),
+      child: ListView(children: [
+        Text(
+          "How Often Was the Oil Changed?",
+          style: theme.textTheme.bodyText2!.copyWith(),
+        ),
+        const SizedBox(
+          height: 10.0,
+        ),
+        const CustomDropdown(
+          options: [
+            'Brake Condition',
+            'Other Condition',
+          ],
+        ),
+        const SizedBox(
+          height: 20.0,
+        ),
+        Text(
+          "Last Time Brakes Replaced?",
+          style: theme.textTheme.bodyText2!.copyWith(),
+        ),
+        const SizedBox(
+          height: 10.0,
+        ),
+        const CustomDropdown(
+          options: [
+            '12 Months',
+            '11 Months',
+          ],
+        ),
+        const SizedBox(
+          height: 20.0,
+        ),
+        Text(
+          "Vibrations While Breaking?",
+          style: theme.textTheme.bodyText2!.copyWith(),
+        ),
+        const SizedBox(
+          height: 10.0,
+        ),
+        ..._widgetWrapThree(_optItems),
+        const SizedBox(
+          height: 20.0,
+        ),
+        Text(
+          "Noise,Squeaks, Rattles?",
+          style: theme.textTheme.bodyText2!.copyWith(),
+        ),
+        const SizedBox(
+          height: 10.0,
+        ),
+        const CustomDropdown(
+          options: [
+            'Noise,Squeaks, Rattles',
+            'Other',
+          ],
+        ),
+        const SizedBox(
+          height: 20.0,
+        ),
+        Text(
+          "Overall Exterior Condition?",
+          style: theme.textTheme.bodyText2!.copyWith(
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        const SizedBox(
+          height: 10.0,
+        ),
+        const CustomDropdown(
+          options: [
+            '1 - 10',
+            '11 - 20',
+            '21 - 30',
+          ],
+        ),
+        const SizedBox(
+          height: 80.0,
+        ),
+      ]),
+    );
+  }
+
+  List<Widget> _widgetWrapThree(_props) {
+    List<Widget> widgets = [];
+
+    for (int i = 0; i < _props.length; i += 2) {
+      Widget item1 = _props[i];
+      Widget item2 = i + 1 >= _props.length ? const SizedBox() : _props[i + 1];
+      widgets.add(
+        Container(
+          margin: const EdgeInsets.only(bottom: 16),
+          child: Row(
+            children: [
+              Expanded(
+                child: item1,
+              ),
+              const SizedBox(
+                width: 15.0,
+              ),
+              Expanded(
+                child: item2,
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
+    return widgets;
+  }
+}

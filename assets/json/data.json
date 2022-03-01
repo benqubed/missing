@@ -1,0 +1,54 @@
+[
+    {
+        "makeName": "Acura",
+        "year": "2018",
+        "model": "MDX 3.5L Technology Package",
+        "vin": "5FJUEU736YDH837243456",
+        "vehicleStock": "MTXHSWIOIXSN",
+        "price": "73,915,00",
+        "mileage": "6",
+        "exteriorColor": "Matrix-Green",
+        "spiff": "750",
+        "availableForCustomer": false,
+        "keysAvailable": false
+    },
+    {
+        "makeName": "Acura",
+        "year": "2015",
+        "model": "RLX",
+        "vin": "009339Y3TGB3YG3YG3YU3",
+        "vehicleStock": "",
+        "price": "2,500,00",
+        "mileage": "0",
+        "exteriorColor": "",
+        "spiff": "",
+        "availableForCustomer": true,
+        "keysAvailable": false
+    },
+    {
+        "makeName": "Acura",
+        "year": "2017",
+        "model": "RLX",
+        "vin": "12738303U3Y38O2U22U2",
+        "vehicleStock": "",
+        "price": "2,500,00",
+        "mileage": "0",
+        "exteriorColor": "",
+        "spiff": "",
+        "availableForCustomer": true,
+        "keysAvailable": true
+    },
+    {
+        "makeName": "Acura",
+        "year": "2011",
+        "model": "TSX 2.4",
+        "vin": "HJMNDBHUSSBNXYWUEIUHD",
+        "vehicleStock": "L337",
+        "price": "2,500,00",
+        "mileage": "47,800",
+        "exteriorColor": "",
+        "spiff": "",
+        "availableForCustomer": true,
+        "keysAvailable": true
+    }
+]

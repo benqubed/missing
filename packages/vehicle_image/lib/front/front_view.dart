@@ -1,0 +1,23 @@
+// part of vehicle_image;
+
+// PartData frontLeftBumper = PartData(data: frontLeftBumperPath, nameId: 'frontLeftBumper', labelPosition: [0.7, 0.5]);
+// PartData frontCenterBumper = PartData(data: frontCenterBumperPath, nameId: 'frontCenterBumper', labelPosition: [0.5, 0.85]);
+// PartData frontRightBumper = PartData(data: frontRightBumperPath, nameId: 'frontRightBumper', labelPosition: [0.25, 0.5]);
+// PartData grill = PartData(data: grillPath, nameId: 'grill', labelPosition: [0.5, 0.7]);
+// PartData frontLeftHeadLight = PartData(data: frontLeftHeadLightPath, nameId: 'frontLeftHeadLight', labelPosition: [0.5, 0.5]);
+// PartData frontRightHeadLight = PartData(data: frontRightHeadLightPath, nameId: 'frontRightHeadLight', labelPosition: [0.5, 0.5]);
+// PartData frontLicencePlate = PartData(data: frontLicencePlatePath, nameId: 'frontLicencePlate', labelPosition: [0.5, 0.5]);
+// PartData frontRightSidePanel = PartData(data: frontRightSidePanelPath, nameId: 'frontRightSidePanel', labelPosition: [0.5, 0.5]);
+// PartData frontLeftSidePanel = PartData(data: frontLeftSidePanelPath, nameId: 'frontLeftSidePanel', labelPosition: [0.5, 0.5]);
+// PartData leftUpperHood = PartData(data: leftUpperHoodPath, nameId: 'leftUpperHood', labelPosition: [0.5, 0.5]);
+// PartData leftLowerHood = PartData(data: leftLowerHoodPath, nameId: 'leftLowerHood', labelPosition: [0.5, 0.5]);
+// PartData centerUpperHood = PartData(data: centerUpperHoodPath, nameId: 'centerUpperHood', labelPosition: [0.5, 0.5]);
+// PartData centerLowerHood = PartData(data: centerLowerHoodPath, nameId: 'centerLowerHood', labelPosition: [0.5, 0.5]);
+// PartData rightUpperHood = PartData(data: rightUpperHoodPath, nameId: 'rightUpperHood', labelPosition: [0.5, 0.5]);
+// PartData rightLowerHood = PartData(data: rightLowerHoodPath, nameId: 'rightLowerHood', labelPosition: [0.5, 0.5]);
+// PartData leftUpperWindShield = PartData(data: leftUpperWindShieldPath, nameId: 'leftUpperWindShield', labelPosition: [0.5, 0.5]);
+// PartData leftLowerWindShield = PartData(data: leftLowerWindShieldPath, nameId: 'leftLowerWindShield', labelPosition: [0.5, 0.5]);
+// PartData centerUpperWindShield = PartData(data: centerUpperWindShieldPath, nameId: 'centerUpperWindShield', labelPosition: [0.5, 0.5]);
+// PartData centerLowerWindShield = PartData(data: centerLowerWindShieldPath, nameId: 'centerLowerWindShield', labelPosition: [0.5, 0.5]);
+// PartData rightUpperWindShield = PartData(data: rightUpperWindShieldPath, nameId: 'rightUpperWindShield', labelPosition: [0.5, 0.5]);
+// PartData rightLowerWindShield = PartData(data: rightLowerWindShieldPath, nameId: 'rightLowerWindShield', labelPosition: [0.5, 0.5]);
