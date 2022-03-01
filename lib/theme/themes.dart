@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 // import 'package:google_fonts/google_fonts.dart';
 
 // Color _mainColor = Color(0xff363f45);
@@ -54,6 +55,14 @@ class AppThemes {
             fontWeight: FontWeight.bold,
             fontSize: 20,
             color: _primaryColor,
+          ),
+          systemOverlayStyle: SystemUiOverlayStyle(
+            // Status bar color
+            statusBarColor: _primaryColor,
+
+            // Status bar brightness (optional)
+            statusBarIconBrightness: Brightness.dark, // For Android (dark icons)
+            statusBarBrightness: Brightness.light, // For iOS (dark icons)
           ),
           elevation: 0.0),
       bannerTheme: MaterialBannerThemeData(),
