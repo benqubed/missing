@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:missing/screens/inventory/pages/screens/modals/new_issue.dart';
 import 'package:missing/screens/inventory/widgets/button.dart';
+import 'package:missing/widgets/custom_button.dart';
 
 class IssuesScreen extends StatefulWidget {
   IssuesScreen({Key? key}) : super(key: key);
@@ -56,9 +57,19 @@ class _IssuesScreenState extends State<IssuesScreen> {
           const SizedBox(
             height: 100,
           ),
-          Center(
-            child: _addIssue,
-          )
+          Padding(
+            padding: const EdgeInsets.all(25.0),
+            child: Row(
+              children: [
+                Expanded(
+                  child: CustomButton(
+                    title: "Create Issue",
+                    customFunction: () => _showOverlay(context),
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:missing/screens/screen_1.dart';
-import 'package:missing/screens/screen_10.dart';
-import 'package:missing/screens/screen_11.dart';
-import 'package:missing/screens/screen_12.dart';
+import 'package:missing/screens/schedule/screen_10.dart';
+import 'package:missing/screens/trade_in/screen_11.dart';
+import 'package:missing/screens/trade_in/screen_12.dart';
 import 'package:missing/screens/screen_13.dart';
-import 'package:missing/screens/screen_14.dart';
+import 'package:missing/screens/schedule/screen_14.dart';
 import 'package:missing/screens/screen_2.dart';
-import 'package:missing/screens/screen_3.dart';
+import 'package:missing/screens/inventory/screen_3.dart';
 import 'package:missing/screens/screen_4.dart';
 import 'package:missing/screens/screen_5.dart';
 import 'package:missing/screens/screen_6.dart';

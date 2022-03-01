@@ -28,7 +28,7 @@ class _TimerShiftsState extends State<TimerShifts> {
     ThemeData theme = Theme.of(context);
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
+        elevation: 1,
         title: const Text(
           "Shifts Today",
         ),
@@ -62,26 +62,27 @@ class _TimerShiftsState extends State<TimerShifts> {
             ),
             Center(
               child: ElevatedButton(
-                onPressed: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => const TimeSheetSummary()),
-                  // );
-                },
-                child: Text(
-                  "Shifts Timesheet",
-                  style: theme.textTheme.headline6!.copyWith(color: constants.whiteColor),
+                onPressed: () {},
+                child: Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Text(
+                    "Shifts Timesheet",
+                    style: Theme.of(context).textTheme.bodyText1!.copyWith(color: constants.whiteColor),
+                  ),
                 ),
                 style: ButtonStyle(
                   elevation: MaterialStateProperty.all(0.0),
+                  backgroundColor: MaterialStateProperty.all(
+                    Theme.of(context).primaryColor,
+                  ),
                   shape: MaterialStateProperty.all(
                     RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(100.0),
+                      borderRadius: BorderRadius.circular(10.0),
                     ),
                   ),
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),

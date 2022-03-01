@@ -4,65 +4,34 @@ import 'package:missing/screens/clock_in/qr_code.dart';
 import 'package:missing/screens/clock_in/time_sheet.dart';
 import 'package:missing/screens/clock_in/timer.dart';
 import 'package:missing/screens/clock_in/timer_shifts.dart';
+import 'package:missing/screens/guest_history/home.dart';
+import 'package:missing/screens/guest_history/in_progress.dart';
 
-class ClockInHomePage extends StatelessWidget {
-  const ClockInHomePage({Key? key}) : super(key: key);
+class GuestHistoryHomePage extends StatelessWidget {
+  const GuestHistoryHomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     List<ListMenu> routes = [
       ListMenu(
           number: "1",
-          title: "Home Screen",
+          title: "In Progress",
           routeFunction: () {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const ClockInHomeScreen(),
+                builder: (context) => GuestHistory(),
               ),
             );
           }),
       ListMenu(
           number: "2",
-          title: "QR Scan",
+          title: "Closed",
           routeFunction: () {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const ScanCode(),
-              ),
-            );
-          }),
-      ListMenu(
-          number: "3",
-          title: "Timer",
-          routeFunction: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const ShiftTimer(),
-              ),
-            );
-          }),
-      ListMenu(
-          number: "4",
-          title: "Timer Shifts",
-          routeFunction: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const TimerShifts(),
-              ),
-            );
-          }),
-      ListMenu(
-          number: "5",
-          title: "Time Sheet",
-          routeFunction: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const TimeSheetSummary(),
+                builder: (context) => const InProgress(),
               ),
             );
           }),

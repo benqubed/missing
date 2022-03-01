@@ -33,10 +33,8 @@ class _DealsScreenState extends State<DealsScreen> {
               ),
             )
           ],
-          bottom: TabBar(
-            labelStyle: theme.textTheme.bodyText2!.copyWith(),
-            labelColor: constants.whiteColor,
-            tabs: const [
+          bottom: const TabBar(
+            tabs: [
               Tab(
                 text: "Customer",
               ),

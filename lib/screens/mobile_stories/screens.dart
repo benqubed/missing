@@ -1,75 +1,75 @@
 import 'package:flutter/material.dart';
-import 'package:missing/screens/clock_in/home.dart';
-import 'package:missing/screens/clock_in/qr_code.dart';
-import 'package:missing/screens/clock_in/time_sheet.dart';
-import 'package:missing/screens/clock_in/timer.dart';
-import 'package:missing/screens/clock_in/timer_shifts.dart';
+import 'package:missing/screens/mobile_stories/screen_1.dart';
+import 'package:missing/screens/mobile_stories/screen_2.dart';
+import 'package:missing/screens/mobile_stories/screen_3.dart';
+import 'package:missing/screens/mobile_stories/screen_4.dart';
+import 'package:missing/screens/mobile_stories/screen_5.dart';
 
-class ClockInHomePage extends StatelessWidget {
-  const ClockInHomePage({Key? key}) : super(key: key);
+class MobileStoriesHomePage extends StatelessWidget {
+  const MobileStoriesHomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     List<ListMenu> routes = [
       ListMenu(
           number: "1",
-          title: "Home Screen",
+          title: "Screen 1",
           routeFunction: () {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const ClockInHomeScreen(),
+                builder: (context) => const First(),
               ),
             );
           }),
       ListMenu(
           number: "2",
-          title: "QR Scan",
+          title: "Screen 2",
           routeFunction: () {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const ScanCode(),
+                builder: (context) => const Second(),
               ),
             );
           }),
       ListMenu(
           number: "3",
-          title: "Timer",
+          title: "Screen 3",
           routeFunction: () {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const ShiftTimer(),
+                builder: (context) => const Three(),
               ),
             );
           }),
       ListMenu(
           number: "4",
-          title: "Timer Shifts",
+          title: "Screen 4",
           routeFunction: () {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const TimerShifts(),
+                builder: (context) => const Four(),
               ),
             );
           }),
       ListMenu(
           number: "5",
-          title: "Time Sheet",
+          title: "Screen 5",
           routeFunction: () {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const TimeSheetSummary(),
+                builder: (context) => const Five(),
               ),
             );
           }),
     ];
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Clock-in Page"),
+        title: const Text("Mobile Stories Page"),
       ),
       body: ListView.builder(
         itemCount: routes.length,

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:missing/screens/inventory/pages/screens/modals/new_issue.dart';
 import 'package:missing/screens/inventory/widgets/button.dart';
+import 'package:missing/widgets/custom_button.dart';
 
 class IssuesSecondScreen extends StatefulWidget {
   IssuesSecondScreen({Key? key}) : super(key: key);
@@ -58,15 +59,22 @@ class _IssuesSecondScreenState extends State<IssuesSecondScreen> {
                     );
                   }),
             ),
-            SizedBox(
+            const SizedBox(
               height: 50,
             ),
-            Center(
-              child: SizedBox(
-                width: 300,
-                child: _addIssue,
+            Padding(
+              padding: const EdgeInsets.all(25.0),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: CustomButton(
+                      title: "Create Issue",
+                      customFunction: () => _showOverlay(context),
+                    ),
+                  ),
+                ],
               ),
-            )
+            ),
           ],
         ),
       ),

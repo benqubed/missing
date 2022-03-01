@@ -255,27 +255,28 @@ class Stages extends StatelessWidget {
             width: 40,
           ),
           Expanded(
-            child: ElevatedButton(
-              onPressed: callFunction,
-              child: Row(
-                children: [
-                  Flexible(child: iconPath),
-                  const SizedBox(
-                    width: 50.0,
-                  ),
-                  Flexible(
-                    child: Text(
-                      title,
-                      style: theme.textTheme.bodyText2!.copyWith(color: constants.whiteColor),
-                    ),
-                  ),
-                ],
+            child: ElevatedButton.icon(
+              onPressed: () {},
+              icon: iconPath,
+              label: Padding(
+                padding: const EdgeInsets.only(
+                  top: 15.0,
+                  bottom: 15.0,
+                  left: 40.0,
+                ),
+                child: Text(
+                  title,
+                  style: Theme.of(context).textTheme.bodyText1!.copyWith(color: constants.whiteColor),
+                ),
               ),
               style: ButtonStyle(
                 elevation: MaterialStateProperty.all(0.0),
+                backgroundColor: MaterialStateProperty.all(
+                  Theme.of(context).primaryColor,
+                ),
                 shape: MaterialStateProperty.all(
                   RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(100.0),
+                    borderRadius: BorderRadius.circular(10.0),
                   ),
                 ),
               ),

@@ -1,18 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:missing/screens/auth/login.dart';
+import 'package:missing/screens/clock_in/screens.dart';
+import 'package:missing/screens/deals/deals_screen.dart';
+import 'package:missing/screens/guest_history/home.dart';
+import 'package:missing/screens/guest_history/screens.dart';
+import 'package:missing/screens/inventory/screens.dart';
+import 'package:missing/screens/live_view/live_view.dart';
+import 'package:missing/screens/mobile_stories/screens.dart';
+import 'package:missing/screens/schedule/screens.dart';
 import 'package:missing/screens/screen_1.dart';
-import 'package:missing/screens/screen_10.dart';
-import 'package:missing/screens/screen_11.dart';
-import 'package:missing/screens/screen_12.dart';
+import 'package:missing/screens/schedule/screen_10.dart';
+import 'package:missing/screens/trade_in/screen_11.dart';
+import 'package:missing/screens/trade_in/screen_12.dart';
 import 'package:missing/screens/screen_13.dart';
-import 'package:missing/screens/screen_14.dart';
+import 'package:missing/screens/schedule/screen_14.dart';
 import 'package:missing/screens/screen_2.dart';
-import 'package:missing/screens/screen_3.dart';
+import 'package:missing/screens/inventory/screen_3.dart';
 import 'package:missing/screens/screen_4.dart';
 import 'package:missing/screens/screen_5.dart';
 import 'package:missing/screens/screen_6.dart';
 import 'package:missing/screens/screen_7.dart';
 import 'package:missing/screens/screen_8.dart';
 import 'package:missing/screens/screen_9.dart';
+import 'package:missing/screens/tasks/screens.dart';
+import 'package:missing/screens/trade_in/screens.dart';
 import 'package:missing/theme/themes.dart';
 
 void main() => runApp(MaterialApp(
@@ -35,7 +46,7 @@ class HomePage extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const ScreenOne(),
+                builder: (context) => const LoginPage(),
               ),
             );
           }),
@@ -46,7 +57,7 @@ class HomePage extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const ScreenTwo(),
+                builder: (context) => const ScreenOne(),
               ),
             );
           }),
@@ -57,7 +68,18 @@ class HomePage extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const ScreenThree(),
+                builder: (context) => const ClockInHomePage(),
+              ),
+            );
+          }),
+      ListMenu(
+          number: "3.2",
+          title: "Deals Screen",
+          routeFunction: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const DealsScreen(),
               ),
             );
           }),
@@ -68,7 +90,7 @@ class HomePage extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const ScreenFour(),
+                builder: (context) => const GuestHistoryHomePage(),
               ),
             );
           }),
@@ -79,7 +101,7 @@ class HomePage extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const ScreenFive(),
+                builder: (context) => const InventoryHomePage(),
               ),
             );
           }),
@@ -90,7 +112,7 @@ class HomePage extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const ScreenSix(),
+                builder: (context) => const LiveViewScreen(),
               ),
             );
           }),
@@ -101,7 +123,7 @@ class HomePage extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const ScreenSeven(),
+                builder: (context) => const ScheduleHomePage(),
               ),
             );
           }),
@@ -112,7 +134,7 @@ class HomePage extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const ScreenEight(),
+                builder: (context) => const TasksHomePage(),
               ),
             );
           }),
@@ -123,46 +145,13 @@ class HomePage extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const ScreenNine(),
+                builder: (context) => const TradeInHomePage(),
               ),
             );
           }),
       ListMenu(
           number: "10",
-          title: "More Info",
-          routeFunction: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const ScreenTen(),
-              ),
-            );
-          }),
-      ListMenu(
-          number: "11",
-          title: "Screen 11 (Trade Appraisal)",
-          routeFunction: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const ScreenEleven(),
-              ),
-            );
-          }),
-      ListMenu(
-          number: "12",
-          title: "Screen 12 (Trade Damage)",
-          routeFunction: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const ScreenTwelve(),
-              ),
-            );
-          }),
-      ListMenu(
-          number: "13",
-          title: "Screen 13 (Trade Questionaire)",
+          title: "Screen 10 (Trade Questionaire)",
           routeFunction: () {
             Navigator.push(
               context,
@@ -172,101 +161,79 @@ class HomePage extends StatelessWidget {
             );
           }),
       ListMenu(
-          number: "14",
-          title: "Screen 14 (Offer up Shift)",
+          number: "11",
+          title: "Screen 11 (Verification)",
           routeFunction: () {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const ScreenFourteen(),
+                builder: (context) => const ScreenTwo(),
+              ),
+            );
+          }),
+      ListMenu(
+          number: "12",
+          title: "Screen 12 (Credit Inquiry)",
+          routeFunction: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const ScreenFour(),
+              ),
+            );
+          }),
+      ListMenu(
+          number: "13",
+          title: "Screen 13 (Compliance)",
+          routeFunction: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const ScreenFive(),
+              ),
+            );
+          }),
+      ListMenu(
+          number: "14",
+          title: "Screen 14 (Search Co-Borrower)",
+          routeFunction: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const ScreenSeven(),
               ),
             );
           }),
       ListMenu(
           number: "15",
-          title: "Screen 15 (Offer up Shift)",
+          title: "Screen 15 (Notification Settings)",
           routeFunction: () {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const ScreenFourteen(),
+                builder: (context) => const ScreenEight(),
               ),
             );
           }),
       ListMenu(
           number: "16",
-          title: "Screen 16 (Offer up Shift)",
+          title: "Screen 16 (Payment Options)",
           routeFunction: () {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const ScreenFourteen(),
+                builder: (context) => const ScreenNine(),
               ),
             );
           }),
       ListMenu(
           number: "17",
-          title: "Screen 17 (Offer up Shift)",
+          title: "Screen 17 (Mobile Stories)",
           routeFunction: () {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const ScreenFourteen(),
-              ),
-            );
-          }),
-      ListMenu(
-          number: "18",
-          title: "Screen 18 (Offer up Shift)",
-          routeFunction: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const ScreenFourteen(),
-              ),
-            );
-          }),
-      ListMenu(
-          number: "19",
-          title: "Screen 19 (Offer up Shift)",
-          routeFunction: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const ScreenFourteen(),
-              ),
-            );
-          }),
-      ListMenu(
-          number: "20",
-          title: "Screen 20 (Offer up Shift)",
-          routeFunction: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const ScreenFourteen(),
-              ),
-            );
-          }),
-      ListMenu(
-          number: "21",
-          title: "Screen 21 (Offer up Shift)",
-          routeFunction: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const ScreenFourteen(),
-              ),
-            );
-          }),
-      ListMenu(
-          number: "22",
-          title: "Screen 22 (Offer up Shift)",
-          routeFunction: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const ScreenFourteen(),
+                builder: (context) => const MobileStoriesHomePage(),
               ),
             );
           }),

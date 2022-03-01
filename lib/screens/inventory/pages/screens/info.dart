@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:missing/screens/inventory/pages/screens/modals/add_notes.dart';
 import 'package:missing/screens/inventory/widgets/button.dart';
+import 'package:missing/widgets/custom_button.dart';
 
 class InfoScreen extends StatelessWidget {
   const InfoScreen({Key? key}) : super(key: key);
@@ -68,21 +69,25 @@ class InfoScreen extends StatelessWidget {
             _actionButtons(context),
             Padding(
               padding: const EdgeInsets.all(25.0),
-              child: Button(
-                  title: "Add Notes",
-                  onPressed: () {
-                    showDialog(
-                      barrierColor: Colors.black26,
-                      context: context,
-                      builder: (context) {
-                        return const AddNotes();
+              child: Row(
+                children: [
+                  Expanded(
+                    child: CustomButton(
+                      title: "Add Notes",
+                      customFunction: () {
+                        showDialog(
+                          barrierColor: Colors.black26,
+                          context: context,
+                          builder: (context) {
+                            return const AddNotes();
+                          },
+                        );
                       },
-                    );
-                    // Navigator.of(context).push(PageRouteBuilder(opaque: false, pageBuilder: (BuildContext context, _, __) => AddNotes()));
-                  },
-                  color: Theme.of(context).primaryColor,
-                  elevation: 0),
-            )
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),

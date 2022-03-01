@@ -101,10 +101,9 @@ class _ShiftTimerState extends State<ShiftTimer> {
     ThemeData theme = Theme.of(context);
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
+        elevation: 1,
         title: const Text(
           "Shift Clock",
-          style: TextStyle(color: Colors.white),
         ),
       ),
       body: Padding(
@@ -123,11 +122,58 @@ class _ShiftTimerState extends State<ShiftTimer> {
             const SizedBox(
               height: 50,
             ),
-            Center(child: _startPauseButton()),
+            // Center(child: _startPauseButton()),
+            Center(
+              child: ElevatedButton(
+                onPressed: () {},
+                child: Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Text(
+                    "Take Lunch Break",
+                    style: Theme.of(context).textTheme.bodyText1!.copyWith(color: constants.whiteColor),
+                  ),
+                ),
+                style: ButtonStyle(
+                  elevation: MaterialStateProperty.all(0.0),
+                  backgroundColor: MaterialStateProperty.all(
+                    Theme.of(context).primaryColor,
+                  ),
+                  shape: MaterialStateProperty.all(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                  ),
+                ),
+              ),
+            ),
             const SizedBox(
               height: 30,
             ),
-            Center(child: _endShiftButton())
+            //Center(child: _endShiftButton())
+            Center(
+              child: ElevatedButton.icon(
+                onPressed: () {},
+                icon: Icon(Icons.timer),
+                label: Padding(
+                  padding: const EdgeInsets.only(top: 15.0, bottom: 15.0),
+                  child: Text(
+                    "Take Lunch Break",
+                    style: Theme.of(context).textTheme.bodyText1!.copyWith(color: constants.whiteColor),
+                  ),
+                ),
+                style: ButtonStyle(
+                  elevation: MaterialStateProperty.all(0.0),
+                  backgroundColor: MaterialStateProperty.all(
+                    Colors.red,
+                  ),
+                  shape: MaterialStateProperty.all(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),

@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:missing/screens/clock_in/home.dart';
-import 'package:missing/screens/clock_in/qr_code.dart';
-import 'package:missing/screens/clock_in/time_sheet.dart';
-import 'package:missing/screens/clock_in/timer.dart';
-import 'package:missing/screens/clock_in/timer_shifts.dart';
+import 'package:missing/screens/trade_in/damage_history.dart';
+import 'package:missing/screens/trade_in/damages.dart';
+import 'package:missing/screens/trade_in/home.dart';
+import 'package:missing/screens/trade_in/preview_screen.dart';
+import 'package:missing/screens/trade_in/screen_11.dart';
+import 'package:missing/screens/trade_in/screen_12.dart';
 
-class ClockInHomePage extends StatelessWidget {
-  const ClockInHomePage({Key? key}) : super(key: key);
+class TradeInHomePage extends StatelessWidget {
+  const TradeInHomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,58 +19,69 @@ class ClockInHomePage extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const ClockInHomeScreen(),
+                builder: (context) => const TradeInScreen(),
               ),
             );
           }),
       ListMenu(
           number: "2",
-          title: "QR Scan",
+          title: "Preview Screen",
           routeFunction: () {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const ScanCode(),
+                builder: (context) => const PreviewScreen(),
               ),
             );
           }),
+      // ListMenu(
+      //     number: "3",
+      //     title: "Vehicle Damages",
+      //     routeFunction: () {
+      //       Navigator.push(
+      //         context,
+      //         MaterialPageRoute(
+      //           builder: (context) => VehicleDamages(),
+      //         ),
+      //       );
+      //     }),
+      // ListMenu(
+      //     number: "4",
+      //     title: "Damage History",
+      //     routeFunction: () {
+      //       Navigator.push(
+      //         context,
+      //         MaterialPageRoute(
+      //           builder: (context) => DamageHistory(),
+      //         ),
+      //       );
+      //     }),
       ListMenu(
           number: "3",
-          title: "Timer",
+          title: "Trade Appraisal",
           routeFunction: () {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const ShiftTimer(),
+                builder: (context) => const ScreenEleven(),
               ),
             );
           }),
       ListMenu(
           number: "4",
-          title: "Timer Shifts",
+          title: "Trade Damage",
           routeFunction: () {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const TimerShifts(),
-              ),
-            );
-          }),
-      ListMenu(
-          number: "5",
-          title: "Time Sheet",
-          routeFunction: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const TimeSheetSummary(),
+                builder: (context) => const ScreenTwelve(),
               ),
             );
           }),
     ];
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Clock-in Page"),
+        title: const Text("Trade-in Page"),
       ),
       body: ListView.builder(
         itemCount: routes.length,

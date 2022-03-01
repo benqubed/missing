@@ -14,7 +14,7 @@ class _ScanCodeState extends State<ScanCode> {
     ThemeData theme = Theme.of(context);
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
+        elevation: 1,
         title: const Text(
           "Time Clock",
         ),

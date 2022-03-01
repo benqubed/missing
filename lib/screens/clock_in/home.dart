@@ -9,14 +9,13 @@ class ClockInHomeScreen extends StatelessWidget {
     ThemeData theme = Theme.of(context);
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
+        elevation: 1,
         title: const Text(
           "Clock-in",
-          style: TextStyle(color: Colors.white),
         ),
       ),
       body: Container(
-        padding: EdgeInsets.only(top: 50),
+        padding: EdgeInsets.only(top: 100),
         height: 300,
         child: Center(
           child: GestureDetector(

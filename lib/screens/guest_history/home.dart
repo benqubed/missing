@@ -35,7 +35,7 @@ class _GuestHistoryState extends State<GuestHistory> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Guest History'),
-        elevation: 0,
+        elevation: 1,
         actions: [
           IconButton(
               onPressed: () {

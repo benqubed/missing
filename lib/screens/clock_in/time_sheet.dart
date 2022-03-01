@@ -33,7 +33,7 @@ class _TimeSheetSummaryState extends State<TimeSheetSummary> {
     ThemeData theme = Theme.of(context);
     return Scaffold(
         appBar: AppBar(
-          elevation: 0,
+          elevation: 1,
           title: const Text(
             "Time Sheet Summary",
           ),
